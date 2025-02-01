@@ -1,4 +1,4 @@
-package com.example.numbersapi.responses;
+package com.example.numbersapi.dto.responses;
 
 public class ApiResponse<T> {
 
