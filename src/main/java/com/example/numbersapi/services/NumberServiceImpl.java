@@ -12,13 +12,6 @@ import java.util.List;
 @Service
 public class NumberServiceImpl implements NumbersService {
 
-//            "number": 371,
-//            "is_prime": false,
-//            "is_perfect": false,
-//            "properties": ["armstrong", "odd"],
-//            "class_sum": 11,  // sum of its digits
-//            "fun_fact": "371 is an Armstrong number because 3^3 + 7^3 + 1^3 = 371"
-
     @Override
     public NumberApiResponse deriveNumberFunFact(String number) {
         boolean isPrime = determineIfPrimeNumber(Integer.parseInt(number));
@@ -41,17 +34,6 @@ public class NumberServiceImpl implements NumbersService {
         return apiResponse;
     }
 
-
-
-//    private String getNumberFunFact(int number) {
-//        String url = "http://numbersapi.com/" + number + "/math";
-//        System.out.println(url);
-//        RestTemplate restTemplate = new RestTemplate();
-//        String funFact = restTemplate.getForObject(url, String.class);
-//
-//
-//        return funFact;
-//    }
 
 
     private String getNumberFunFact(int number) {
