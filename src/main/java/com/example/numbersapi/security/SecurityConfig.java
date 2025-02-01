@@ -13,11 +13,10 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securtyFilterChain(HttpSecurity httpSecurity) throws Exception {
         return httpSecurity
-//        .csrf(AbstractHttpConfigurer::disable)
         .cors(Customizer.withDefaults())
         .sessionManagement(c -> c.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
         .authorizeHttpRequests(request ->
-                request.requestMatchers("api/classify-number/**").permitAll()).build();
+                request.requestMatchers("/api/classify-number/**").permitAll()).build();
     }
 
 
