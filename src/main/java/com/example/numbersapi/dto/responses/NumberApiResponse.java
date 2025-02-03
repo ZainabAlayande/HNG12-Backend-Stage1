@@ -4,7 +4,7 @@ import java.util.List;
 
 public class NumberApiResponse {
 
-    private String number;
+    private int number;
     private boolean is_prime;
     private boolean is_perfect;
     private List<String> properties;
@@ -12,11 +12,11 @@ public class NumberApiResponse {
     private String fun_fact;
 
 
-    public String getNumber() {
+    public int getNumber() {
         return number;
     }
 
-    public void setNumber(String number) {
+    public void setNumber(int number) {
         this.number = number;
     }
 

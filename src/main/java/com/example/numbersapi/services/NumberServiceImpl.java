@@ -25,7 +25,7 @@ public class NumberServiceImpl implements NumbersService {
     private NumberApiResponse buildNumberApiResponse(String number, boolean isPrime, boolean isPerfect, int totalSum,
                                                      List<String> numberProperties, String funFact) {
         NumberApiResponse apiResponse = new NumberApiResponse();
-        apiResponse.setNumber(number);
+        apiResponse.setNumber(Integer.parseInt(number));
         apiResponse.setClass_sum(totalSum);
         apiResponse.setFun_fact(funFact);
         apiResponse.setProperties(numberProperties);
@@ -63,9 +63,9 @@ public class NumberServiceImpl implements NumbersService {
 
     private List<String> getNumberProperties(int i) {
         List<String> numberProperties = new ArrayList<>();
-        if (isArmstrong(i)) numberProperties.add("Armstrong");
-        if (i % 2 == 0) numberProperties.add("Even");
-        else numberProperties.add("Odd");
+        if (isArmstrong(i)) numberProperties.add("armstrong");
+        if (i % 2 == 0) numberProperties.add("even");
+        else numberProperties.add("odd");
         return numberProperties;
     }
 

@@ -40,9 +40,9 @@ public class NumbersApiController {
         } catch (NumberFormatException e) {
             return "Invalid number format";
         }
-        if (Integer.parseInt(number) < 0) {
-            return "Number cannot be negative";
-        }
+//        if (Integer.parseInt(number) < 0) {
+//            return "Number cannot be negative";
+//        }
 
         return null;
     }
